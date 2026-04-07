@@ -14,10 +14,7 @@ const NavBar = ({ appTitle }: { appTitle: string }) => {
           {
             routerLinks.map(r => (
               <li className="nav-item" key={r.path}>
-                <NavLink
-                  to={r.path}
-                  className=
-                    {
+                <NavLink to={r.path} className={
                       ({ isActive }) => `nav-link ${isActive ? "active" : ""}`
                     }
                 >

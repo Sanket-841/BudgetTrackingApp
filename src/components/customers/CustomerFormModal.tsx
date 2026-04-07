@@ -36,35 +36,13 @@ const CustomerFormModal = () => {
           </div>
 
           <div className="modal-body">
-            <input
-              type="number"
-              className="form-control mb-3"
-              placeholder="CRIN"
-              value={CRIN}
-              onChange={e => setCRIN(Number(e.target.value))}
-            />
-            <input
-              type="text"
-              className="form-control mb-3"
-              placeholder="Name"
-              value={name}
-              onChange={e => setName(e.target.value)}
-            />
-            <input
-              type="text"
-              className="form-control mb-3"
-              placeholder="Mobile"
-              value={mobile}
-              onChange={e => setMobile(e.target.value)}
-            />
-            <input
-              type="email"
-              className="form-control"
-              placeholder="MailId"
-              value={mailId}
-              onChange={e => setMailId(e.target.value)}
-            />
+            <input type="number" className="form-control mb-3" placeholder="CRIN" value={CRIN} onChange={e => setCRIN(Number(e.target.value))}/>
 
+            <input type="text" className="form-control mb-3" placeholder="Name" value={name} onChange={e => setName(e.target.value)}/>
+
+            <input type="text" className="form-control mb-3" placeholder="Mobile" value={mobile} onChange={e => setMobile(e.target.value)}/>
+
+            <input type="email" className="form-control" placeholder="MailId" value={mailId} onChange={e => setMailId(e.target.value)}/>
           </div>
 
           <div className="modal-footer">

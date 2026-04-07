@@ -12,12 +12,10 @@ const Statement = () => {
   const { accNum } = useParams();
   const accountNo = Number(accNum);
 
-  // ✅ transactions ONLY for this account
   const txns = useSelector((state: RootState) =>
     state.statement.txns.filter(t => t.accNum === accountNo)
   );
 
-  // ✅ per-account summary (display only)
   const summary = txns.reduce(
     (acc, txn) => {
       if (txn.txnType === "CREDIT") {

@@ -21,9 +21,11 @@ const CustomerTable = () => {
         </tr>
       </thead>
       <tbody>
-        {customers.map(c => (
-          <CustomerRow key={c.CRIN} customer={c} />
-        ))}
+        {
+          customers.map(c => (
+            <CustomerRow key={c.CRIN} customer={c} />
+          ))
+        }
       </tbody>
     </table>
   );

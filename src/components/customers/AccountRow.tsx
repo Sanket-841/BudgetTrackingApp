@@ -11,10 +11,7 @@ const AccountRow = ({ account }: { account: Account }) => {
       <td>{account.type}</td>
       <td>{account.balance}</td>
       <td>
-        <button
-          className="btn btn-sm btn-primary"
-          onClick={() => navigate(`/${account.CRIN}/statement/${account.accNum}`)}
-        >
+        <button className="btn btn-sm btn-primary" onClick={() => navigate(`/${account.CRIN}/statement/${account.accNum}`)}>
           Statement
         </button>
       </td>

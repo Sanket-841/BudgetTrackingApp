@@ -28,22 +28,15 @@ const AccountTable = ({ CRIN }: { CRIN: number }) => {
       </thead>
 
       <tbody>
-        {accounts.map(account => {
-          const balance = txns
-            .filter(t => t.accNum === account.accNum)
-            .reduce(
-              (bal, t) =>
-                t.txnType === "CREDIT" ? bal + t.amount : bal - t.amount,
-              0
-            );
+        {
+          accounts.map( account => {
+            const balance = txns.filter(t => t.accNum === account.accNum).reduce((bal, t) =>
+                  t.txnType === "CREDIT" ? bal + t.amount : bal - t.amount, 0
+              );
 
-          return (
-            <AccountRow
-              key={account.accNum}
-              account={{ ...account, balance }}
-            />
-          );
-        })}
+            return <AccountRow key={account.accNum} account={{ ...account, balance }}/>
+          })
+        }
       </tbody>
     </table>
   );
